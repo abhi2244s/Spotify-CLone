@@ -60,6 +60,34 @@
             -webkit-box-pack: center;
             justify-content: center;
        }
+       .section1{
+        background: linear-gradient(rgb(176, 35, 194) 15%, rgb(96, 11, 231));
+       }
+       .center-credit{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 400px;
+
+       }
+       .accordion-content{
+        /* transition: .2s ease; */
+       }
+       .accordion-answer{
+        height: 0;
+        overflow: hidden;
+        overflow-y: auto;
+       
+       }
+       .accordion-content.active .accordion-answer{
+        height: 200px;
+        transition:  .2s ease;
+        padding: 10px;
+       }
+       .accordion-content.active i{
+        transform: rotate(180deg);
+       }
+      
         
     </style>
 </head>
@@ -118,7 +146,7 @@
     <!-- hero-container end -->
 
     <!-- why spotify -->
-    <section class="h-[500px]">
+    <section class="md:h-[500px] h-auto">
         <div class="container mx-auto w-5/6">
             <div class="mt-12">
                 <h1 class="text-center text-[40px] font-black leading-[46px]">Why Spotify</h1>
@@ -167,6 +195,116 @@
 
             </div>
 
+        </div>
+    </section>
+    <!-- why spotify end -->
+
+    <!-- credit card -->
+    <section class=" section1 h-auto">
+        <div class="container mx-auto w-5/6 center-credit">
+            <div class="text-center">
+                <h2 class="text-white text-[48px] font-black leading-[58px]">It's free.</h2>
+                <h2 class="text-white text-[48px] font-black leading-[58px]">No credit card required.</h2>
+            </div>
+        </div>
+    </section>
+    <!-- credit -card end -->
+    <!-- accordion -->
+    <section>
+        <div class="container mx-auto w-5/6">
+            <div class="text-center mt-12">
+                <h1 class="text-[40px] font-black leading-[46px]">Got questions?</h1>
+            </div>
+            <div class="accordion">
+                <!-- accordion-content 1 -->
+                <div class="accordion-content md:m-12 m-6 ">
+                    <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] md:h-[50px] h-auto p-3">
+                        <a href="">How do I create a playlist?</a>
+                        <i class="fa fa-angle-up text-[#2D2D2D] font-thin md:mx-0 mx-7" style="font-size:30px"></i>
+                    </div>
+                    <div class="accordion-answer">
+                        <p>Playlists are a great way to save collections of music, either for your own listening or to share.
+                        </br>
+
+                            To create one:
+                        </br>
+                            
+                            1. Tap Your Library.
+                        </br>
+                            2. Tap CREATE.
+                        </br>
+                            3. Give your playlist a name.
+                        </br>
+                            4. Start adding songs (and we'll help you along).</p>
+                    </div>
+                </div>
+                <!-- accordion-content 2 -->
+                <div class="accordion-content md:m-12 m-6">
+                    <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] h-[50px] p-3 h-auto">
+                        <a href="">How do I create a playlist?</a>
+                        <i class="fa fa-angle-up md:mx-0 mx-7" style="font-size:30px"></i>
+                    </div>
+                    <div class="accordion-answer">
+                        <p>Playlists are a great way to save collections of music, either for your own listening or to share.
+                        </br>
+
+                            To create one:
+                        </br>
+                            
+                            1. Tap Your Library.
+                        </br>
+                            2. Tap CREATE.
+                        </br>
+                            3. Give your playlist a name.
+                        </br>
+                            4. Start adding songs (and we'll help you along).</p>
+                    </div>
+                </div>
+                <!-- accordion - content-3 -->
+                <div class="accordion-content md:m-12 m-6">
+                    <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] h-[50px] p-3 h-auto">
+                        <a href="">How do I create a playlist?</a>
+                        <i class="fa fa-angle-up md:mx-0 mx-7" style="font-size:30px"></i>
+                    </div>
+                    <div class="accordion-answer">
+                        <p>Playlists are a great way to save collections of music, either for your own listening or to share.
+                        </br>
+
+                            To create one:
+                        </br>
+                            
+                            1. Tap Your Library.
+                        </br>
+                            2. Tap CREATE.
+                        </br>
+                            3. Give your playlist a name.
+                        </br>
+                            4. Start adding songs (and we'll help you along).</p>
+                    </div>
+                </div>
+                <!-- accordion content-4 -->
+                <div class="accordion-content md:m-12 m-6">
+                    <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] h-[50px] p-3 h-auto">
+                        <a href="">How do I create a playlist?</a>
+                        <i class="fa fa-angle-up md:mx-0 mx-7" style="font-size:30px"></i>
+                    </div>
+                    <div class="accordion-answer">
+                        <p>Playlists are a great way to save collections of music, either for your own listening or to share.
+                        </br>
+
+                            To create one:
+                        </br>
+                            
+                            1. Tap Your Library.
+                        </br>
+                            2. Tap CREATE.
+                        </br>
+                            3. Give your playlist a name.
+                        </br>
+                            4. Start adding songs (and we'll help you along).</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <script type="text/javascript" src="spotify.js"></script>
