@@ -5,12 +5,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link href="http://fonts.cdnfonts.com/css/circular-std" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
         theme: {
+            
           extend: {
+            fontFamily: {
+           circular: ["Circular Std", "sans-serif"],
+           adelia: ["ADELIA", "cursive"],
+           },
             colors: {
               clifford: '#da373d',
             }
@@ -18,17 +24,45 @@
         }
       }
     </script>
+    <style>
+        body{
+            font-family: "Circular Std",spotify-circular, Helvetica, Arial, sans-serif;
+        }
+    </style>
 </head>
 <body>
-    <div class="bg-[#1D75DE]">
+    <!-- /language top  -->
+    <div class="bg-[#1D75DE]" id="top-nav">
         <div class="flex justify-between items-center container mx-auto w-5/6 h-[50px]">
             <div>
-                <a href="#" class="text-white underline underline-offset-1">भारत (हिन्दी)</a>
+                <a href="#" class="text-white underline underline-offset-1 text-xs">भारत (हिन्दी)</a>
             </div>
             <div>
-                <span class="text-2xl text-white font-normal">x</span>
+                <span class="text-2xl text-white font-normal cursor-pointer" onclick="cancel()">x</span>
             </div>
         </div>
     </div>
+    <!-- language top -end -->
+
+    <!-- navbar  -->
+    <div class="bg-[#000000]">
+        <div class="flex justify-between items-center h-[70px] container mx-auto w-5/6">
+            <div class="flex space-x-1">
+               <img src="/logo/spotify.png" class="w-12">
+               <span class="text-white  font-bold text-2xl mt-2">Spotify</span>
+            </div>
+            <div class="space-x-6 md:flex hidden">
+                <a href="" class="text-white font-circular text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Premium</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Support</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Download</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Signup</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Login</a>
+            </div>
+            <div class="md:hidden">
+                <i class="fa fa-bars text-white" style="font-size:22px"></i>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="spotify.js"></script>
 </body>
 </html>
