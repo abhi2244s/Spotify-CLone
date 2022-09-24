@@ -17,6 +17,10 @@
            circular: ["Circular Std", "sans-serif"],
            adelia: ["ADELIA", "cursive"],
            },
+           backgroundImage: {
+                'herolg': "url('https://www.scdn.co/i/free/bubbles-dktp.svg')",
+                'hero-sm': "url('/storage/img/sys/sm-hero.jpg')",
+            },
             colors: {
               clifford: '#da373d',
             }
@@ -28,6 +32,35 @@
         body{
             font-family: "Circular Std",spotify-circular, Helvetica, Arial, sans-serif;
         }
+        .section{
+            width: 100%;
+      /* min-height: 450px; */
+      overflow: hidden;
+      /* padding: 15px; */
+      background: url(https://www.scdn.co/i/free/bubbles-mobile.svg) center center / 100% 927px no-repeat, linear-gradient(-45deg, rgb(108, 14, 224) -5%, rgb(240, 55, 166)) rgb(108, 14, 224);
+      background-position: center center;
+     background-repeat: no-repeat;
+        }
+        .svg{
+            position: relative;
+            width: 40%;
+            padding-top: 100px;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+        }
+        .img-container{
+            position: absolute;
+            right: 0px;
+            left: 0px;
+            height: 575px;
+            bottom: -50px;
+            z-index: 1;
+            display: flex;
+            -webkit-box-pack: center;
+            justify-content: center;
+       }
+        
     </style>
 </head>
 <body>
@@ -63,6 +96,27 @@
             </div>
         </div>
     </div>
+    <!-- hero -container -->
+    <section class="section md:h-[500px] h-auto">
+     <div class="flex container mx-auto w-5/6 md:flex-row flex-col">
+        <div class="svg md:flex hidden">
+            <div class="w-[286px] h-[573] ">
+                <svg viewBox="0 0 290 590.58" aria-hidden="true" focusable="false" class="sc-dYRFId joygjw"><path d="M36.28,0H253.72A36.28,36.28,0,0,1,290,36.27v518a36.28,36.28,0,0,1-36.28,36.27H36.28A36.28,36.28,0,0,1,0,554.31v-518A36.28,36.28,0,0,1,36.28,0Z" fill="#fff"></path><path d="M125,25h40a3,3,0,0,1,0,6H125a3,3,0,0,1,0-6Z" fill="#231f20"></path></svg>
+            </div>
+            <div class="img-container">
+                <img src="https://i.scdn.co/image/ab678e040000ed3aed58911aecc6dbc16949f40b" class="w-[270px]">
+            </div>
+        </div>
+      
+        <div class="md:pt-[110px] md:m-16  mt-8">
+            <p class="md:text-[64px] text-[40px] text-white font-black md:leading-[73px] leading-[45px]">Play millions of songs and podcasts, for free.</p>
+            <button class="text-[#212421] bg-[#FFFFFF] p-3 px-5 rounded-full mt-5 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ...">Get Spotify Free</button>
+        </div>
+     </div>
+    </section>
+
+    <!-- hero-container end -->
     <script type="text/javascript" src="spotify.js"></script>
 </body>
 </html>
+
