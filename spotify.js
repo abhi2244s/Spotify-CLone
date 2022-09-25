@@ -6,10 +6,19 @@ function cancel(){
 
 
 let accordion = document.querySelectorAll('.accordion-content')
-console.log(accordion)
-
-for(let i=0; accordion.length;i++){
-    accordion[i].addEventListener('click',function(){
-        this.classList.toggle('active') 
+accordion.forEach(function(e){
+    e.addEventListener('click',()=>{
+     e.classList.toggle('active')
     })
-}
+})
+
+// let hamburger = document.getElementById('hamburger')
+
+
+
+// function ham(){
+//  let none = document.getElementById('none')
+//  none.style.display ='block'
+//  alert('hi')
+// }
+// hamburger.addEventListener('click',ham)

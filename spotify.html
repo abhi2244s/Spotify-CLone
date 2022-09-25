@@ -84,8 +84,24 @@
         transition:  .2s ease;
         padding: 10px;
        }
+       .accordion-content i{
+        transition: .3s all;
+       }
        .accordion-content.active i{
         transform: rotate(180deg);
+       }
+       #none{
+
+       }
+       .ready{
+        width: 100%;
+      /* min-height: 450px; */
+      overflow: hidden;
+      /* padding: 15px; */
+      background: url(https://www.scdn.co/i/free/bubbles-mobile.svg) center center / 100% 927px no-repeat, linear-gradient(-45deg, rgb(108, 14, 224) -5%, rgb(240, 55, 166)) rgb(108, 14, 224);
+      background-position: center center;
+     background-repeat: no-repeat;
+   
        }
       
         
@@ -107,20 +123,27 @@
 
     <!-- navbar  -->
     <div class="bg-[#000000]">
-        <div class="flex justify-between items-center h-[70px] container mx-auto w-5/6">
-            <div class="flex space-x-1">
+        <div class="flex justify-between items-center h-[70px] container mx-auto w-5/6 ">
+            <div class="flex space-x-1 ">
                <img src="/logo/spotify.png" class="w-12">
                <span class="text-white  font-bold text-2xl mt-2">Spotify</span>
             </div>
-            <div class="space-x-6 md:flex hidden">
+            <!-- <div class="space-x-6 md:flex hidden">
                 <a href="" class="text-white font-circular text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Premium</a>
                 <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Support</a>
                 <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Download</a>
                 <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Signup</a>
                 <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Login</a>
+            </div> -->
+            <div class="md:hidden ">
+                <i class="fa fa-bars text-white cursor-pointer" style="font-size:22px" id="hamburger"></i>
             </div>
-            <div class="md:hidden">
-                <i class="fa fa-bars text-white" style="font-size:22px"></i>
+            <div class="space-x-6 md:flex hidden" id="none" >
+                <a href="" class="text-white font-circular text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Premium</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Support</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Download</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Signup</a>
+                <a href="" class="text-white text-base font-bold leading-6 cursor-pointer hover:text-[#16D460]">Login</a>
             </div>
         </div>
     </div>
@@ -219,7 +242,7 @@
                 <!-- accordion-content 1 -->
                 <div class="accordion-content md:m-12 m-6 ">
                     <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] md:h-[50px] h-auto p-3">
-                        <a href="">How do I create a playlist?</a>
+                        <a href="" class="hover:underline hover:underline-offset-1 text-[18px] font-black ">How do I create a playlist?</a>
                         <i class="fa fa-angle-up text-[#2D2D2D] font-thin md:mx-0 mx-7" style="font-size:30px"></i>
                     </div>
                     <div class="accordion-answer">
@@ -241,7 +264,7 @@
                 <!-- accordion-content 2 -->
                 <div class="accordion-content md:m-12 m-6">
                     <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] h-[50px] p-3 h-auto">
-                        <a href="">How do I create a playlist?</a>
+                        <a href="" class="hover:underline hover:underline-offset-1 text-[18px] font-black  ">How do I activate Data Saver mode?</a>
                         <i class="fa fa-angle-up md:mx-0 mx-7" style="font-size:30px"></i>
                     </div>
                     <div class="accordion-answer">
@@ -263,7 +286,7 @@
                 <!-- accordion - content-3 -->
                 <div class="accordion-content md:m-12 m-6">
                     <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] h-[50px] p-3 h-auto">
-                        <a href="">How do I create a playlist?</a>
+                        <a href="" class="hover:underline hover:underline-offset-1 text-[18px] font-black  ">Is it only possible to shuffle play music?</a>
                         <i class="fa fa-angle-up md:mx-0 mx-7" style="font-size:30px"></i>
                     </div>
                     <div class="accordion-answer">
@@ -285,7 +308,7 @@
                 <!-- accordion content-4 -->
                 <div class="accordion-content md:m-12 m-6">
                     <div class="accordion-heading flex justify-between border-b-2 border-solid hover:bg-[#F6F6F6] h-[50px] p-3 h-auto">
-                        <a href="">How do I create a playlist?</a>
+                        <a href="" class="hover:underline hover:underline-offset-1 text-[18px] font-black ">Where can I find Podcasts?</a>
                         <i class="fa fa-angle-up md:mx-0 mx-7" style="font-size:30px"></i>
                     </div>
                     <div class="accordion-answer">
@@ -305,6 +328,20 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!-- ready lets play section -->
+    <section class="ready h-[400px] h-auto">
+        <div class="container mx-auto w-5/6">
+           <div class="center-credit">
+            <div class="text-center">
+                <h2 class="md:text-[80px] text-[40px] font-black text-white md:leading-[96px] leading-[50px]">Ready? Let’s play.</h2>
+            
+            <button class="mt-8 text-black bg-white border-2 border-solid p-3 px-6 rounded-full transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 duration-300 ... ">GET SPOTIFY FREE</button>
+            </div>
+         
+           </div>
         </div>
     </section>
     <script type="text/javascript" src="spotify.js"></script>
