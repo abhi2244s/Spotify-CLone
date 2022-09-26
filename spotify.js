@@ -12,6 +12,14 @@ accordion.forEach(function(e){
     })
 })
 
+
+let anchor = document.getElementById('anchor')
+
+
+
+
+
+
 // let hamburger = document.getElementById('hamburger')
 
 
